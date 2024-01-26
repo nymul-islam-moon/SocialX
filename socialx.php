@@ -137,9 +137,16 @@ function socialx_display_cards() {
         }
 
         .socialx-card {
-            /* ... (existing styles) */
             position: relative; /* Added for the ::before pseudo-element positioning */
             overflow: hidden; /* Ensure the shine effect is contained within the card borders */
+            color: #fff; /* Ensures text is white for better contrast */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Add a light background color to ensure icons and text are clear */
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .socialx-card::before {
@@ -153,6 +160,13 @@ function socialx_display_cards() {
             background-size: 200px 100%;
         }
 
+        .socialx-card h2 {
+            margin-top: 10px;
+            font-size: 1.2em; /* Larger font size for the text */
+            color: #fff; /* Ensuring text is white for better contrast */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability, especially on lighter backgrounds */
+        }
+
         .socialx-card:hover {
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
             animation: spin 1s ease-in-out; /* Spin animation */
@@ -164,17 +178,22 @@ function socialx_display_cards() {
             animation: shine 0.5s; /* Shine effect */
         }
 
+        .snapchat h2 {
+            color: #333; /* Darker text color for Snapchat card specifically */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+        }
+
         /* Specific styles for each social media platform with more realistic brand colors */
-        .facebook { background: rgba(24, 119, 242, 0.8); } /* Facebook Blue */
-        .twitter { background: rgba(29, 161, 242, 0.8); } /* Twitter Blue */
-        .instagram { background: linear-gradient(45deg, rgba(405, 112, 187, 0.8), rgba(228, 64, 95, 0.8), rgba(252, 175, 69, 0.8)); } /* Instagram Gradient */
-        .linkedin { background: rgba(10, 102, 194, 0.8); } /* LinkedIn Blue */
-        .pinterest { background: rgba(189, 8, 28, 0.8); } /* Pinterest Red */
-        .youtube { background: rgba(255, 0, 0, 0.8); } /* YouTube Red */
-        .tiktok { background: rgba(0, 0, 0, 0.8); } /* TikTok Black */
-        .snapchat { background: rgba(255, 252, 0, 0.8); } /* Snapchat Yellow */
-        .reddit { background: rgba(255, 69, 0, 0.8); } /* Reddit Orange */
-        .whatsapp { background: rgba(37, 211, 102, 0.8); } /* WhatsApp Green */
+        .facebook { background-color: rgba(24, 119, 242, 0.8); }
+        .twitter { background-color: rgba(29, 161, 242, 0.8); }
+        .instagram { background: linear-gradient(45deg, rgba(405, 112, 187, 0.8), rgba(228, 64, 95, 0.8), rgba(252, 175, 69, 0.8)); }
+        .linkedin { background-color: rgba(0, 119, 181, 0.8); }
+        .pinterest { background-color: rgba(203, 32, 39, 0.8); }
+        .youtube { background-color: rgba(255, 0, 0, 0.8); }
+        .tiktok { background-color: rgba(0, 0, 0, 0.8); } /* TikTok - Ensure the icon is white for contrast */
+        .snapchat { background-color: rgba(255, 252, 0, 0.8); color: #333 }
+        .reddit { background-color: rgba(255, 69, 0, 0.8); }
+        .whatsapp { background-color: rgba(37, 211, 102, 0.8); }
 
     </style>
 
