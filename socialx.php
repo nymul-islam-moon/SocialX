@@ -122,13 +122,7 @@ function socialx_display_cards() {
             font-size: 50px; /* Increased icon size */
             margin-bottom: 10px;
         }
-
-
-        /* Keyframes for the spin animation */
-        @keyframes spin {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
+        
 
         /* Keyframes for the shine effect */
         @keyframes shine {
